@@ -98,7 +98,7 @@ inline bool clockwise(const Point& p0, const Point& p1, const Point& p2)
         return false;
     }
     double reldet = std::abs(dist / det);
-    if (reldet > 1e14)
+    if (reldet > 1e20)
         return false;
     return det < 0;
 }
@@ -122,7 +122,7 @@ inline bool counterclockwise(const Point& p0, const Point& p1, const Point& p2)
     if (det == 0)
         return false;
     double reldet = std::abs(dist / det);
-    if (reldet > 1e14)
+    if (reldet > 1e20)
         return false;
     return det > 0;
 }
